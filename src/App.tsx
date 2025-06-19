@@ -7,7 +7,6 @@ import { Theme } from "./types";
 import "./App.scss";
 import { AppContext, AppProvider } from "./AppContext";
 import { config } from "./config";
-import TraceIcon from "./components/TraceIcon";
 
 const Container = styled.div<{ $theme: Theme }>`
   transition: background-color 0.5s linear;
@@ -31,9 +30,6 @@ function AppContent() {
       <Toggle />
       <Content />
       <Buttons />
-      {/* Background container to apply theme background */}
-      {/* This is necessary to ensure the background is applied correctly */}
-      {/* and does not interfere with the content layout */}
       <Container $theme={theme} />
     </main>
   );
