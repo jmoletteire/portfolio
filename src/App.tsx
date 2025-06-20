@@ -1,12 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-
+import "./App.css";
+import { AppContext, AppProvider } from "./AppContext";
 import { Buttons, Content, Toggle } from "./components";
+import { config } from "./config";
+import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Theme } from "./types";
-
-import "./App.scss";
-import { AppContext, AppProvider } from "./AppContext";
-import { config } from "./config";
 
 const Container = styled.div<{ $theme: Theme }>`
   transition: background-color 0.5s linear;
